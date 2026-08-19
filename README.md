@@ -188,7 +188,7 @@ This workflow is designed as a **single hub for an entire research program** —
 ## What's Included
 
 <details>
-<summary><strong>18 agents, 52 skills, 32 rules, 7 hooks</strong> (click to expand)</summary>
+<summary><strong>18 agents, 53 skills, 32 rules, 7 hooks</strong> (click to expand)</summary>
 
 ### Agents (`.claude/agents/`)
 
@@ -236,6 +236,7 @@ This workflow is designed as a **single hub for an entire research program** —
 | `/lit-review` | Literature search, synthesis, and gap identification |
 | `/research-ideation` | Generate research questions and empirical strategies |
 | `/interview-me` | Interactive interview to formalize a research idea |
+| `/institutional-background` | Interactive, source-verified research into a program's/policy's legal-institutional background (laws, regulations, funding rules) — grounded in what's already known, every claim carries a source URL + retrieval date + validity window, verified via `claim-verifier` |
 | `/review-paper` | Manuscript review: structure, econometrics, referee objections |
 | `/data-analysis` | End-to-end R analysis with publication-ready output |
 | `/learn` | Extract non-obvious discoveries into persistent skills |
