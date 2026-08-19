@@ -1,0 +1,40 @@
+# Institutional-background claims provenance.
+#
+# Copy to quality_reports/institutional_background/passport.yaml and fill in.
+# Schema: .claude/skills/institutional-background/SKILL.md "Corpus Index &
+# Passport". Status enum and STALE semantics mirror
+# .claude/rules/replication-protocol.md's passport.yaml, redefined for this
+# domain since there's no source_file to diff against — see the skill body
+# for the full STALE-semantics explanation before setting that status.
+
+program: example-program
+
+claims:
+  # Example claim — a founding act with a full amendment/revocation chain
+  # already captured. This is a PERMANENT PASS: the claim already encodes
+  # its own history, so a later amendment/revocation never makes it STALE.
+  - id: C1
+    claim: >
+      Replace with the claim text — e.g. "[Act X] is the founding act of
+      [program]; in effect from [date]; amended by [Act Y] on [date];
+      superseded by [Act Z] on [date]."
+    source_url: "https://example.gov/official-source"
+    retrieval_date: "2026-01-01"
+    validity_window: "enacted YYYY-MM-DD → amended YYYY-MM-DD → superseded YYYY-MM-DD"
+    status: PASS                   # PASS | FAIL | EXPLAINED | STALE | UNVERIFIED
+    last_verified_on: "2026-01-01"
+    last_verified_by: claim-verifier
+    notes: ""
+
+  # Example claim — a single-sourced fact not yet independently corroborated.
+  - id: C2
+    claim: "Replace with the claim text."
+    source_url: "https://example.gov/only-source-found"
+    retrieval_date: "2026-01-01"
+    validity_window: "enacted YYYY-MM-DD → not independently corroborated"
+    status: UNVERIFIED
+    last_verified_on: "2026-01-01"
+    last_verified_by: manual
+    notes: >
+      Single-sourced — could not independently corroborate. Do not cite in
+      the manuscript without confirming directly first.
